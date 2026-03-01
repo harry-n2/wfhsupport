@@ -7,6 +7,11 @@ import { ProfileSection } from "@/components/ProfileSection"
 import { AchievementsSection } from "@/components/AchievementsSection"
 import { VisionSection } from "@/components/VisionSection"
 import { CtaSection } from "@/components/CtaSection"
+import { PainSection } from "@/components/PainSection"
+import { AmplifySection } from "@/components/AmplifySection"
+import { TestimonySection } from "@/components/TestimonySection"
+import { FaqSection } from "@/components/FaqSection"
+import { OfferSection } from "@/components/OfferSection"
 
 export default function Home() {
   return (
@@ -77,22 +82,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Diagnostic Tool Section (アイデンティティ再生診断) */}
+      {/* 2. Pain Section (共感・痛みの言語化) */}
+      <PainSection />
+
+      {/* 3. Diagnostic Tool Section (アイデンティティ再生診断) */}
       <DiagnosticTool />
 
-      {/* 3. Business Overview (事業概要) */}
+      {/* 4. Amplify Section (放置リスク・5年後シミュレーション) */}
+      <AmplifySection />
+
+      {/* 5. Business Overview (事業概要) */}
       <BusinessOverview />
 
-      {/* 4. Profile Section (代表・アドバイザー) */}
+      {/* 6. Profile Section (代表・アドバイザー) */}
       <ProfileSection />
 
-      {/* 5. Achievements Section (実績・SNS) */}
+      {/* 7. Achievements Section (実績・SNS) */}
       <AchievementsSection />
 
-      {/* 6. Vision Section (ビジョンへの誘導) */}
+      {/* 8. Testimony Section (数値実績・ビフォーアフター) */}
+      <TestimonySection />
+
+      {/* 9. FAQ Section (不安解消) */}
+      <FaqSection />
+
+      {/* 10. Vision Section (ビジョンへの誘導) */}
       <VisionSection />
 
-      {/* 7. CTA Section (最終LINE誘導) */}
+      {/* 11. Offer Section (価格・比較表) */}
+      <OfferSection />
+
+      {/* 12. CTA Section (最終LINE誘導) */}
       <CtaSection />
 
     </div>

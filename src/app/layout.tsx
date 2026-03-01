@@ -3,6 +3,7 @@ import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
+import { StickyCtaButton } from "@/components/StickyCtaButton"
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <StickyCtaButton />
       </body>
     </html>
   )
