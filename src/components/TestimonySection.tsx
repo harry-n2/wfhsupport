@@ -1,23 +1,29 @@
+import Image from "next/image"
+
 const stats = [
     {
         value: "94%",
         label: "講座開発成功率",
         desc: "専門知識ゼロの主婦が1ヶ月以内に商品構成を完了した実績",
+        img: "https://images.unsplash.com/photo-1573497491208-6f16f92ff4cb?auto=format&fit=crop&w=200&q=80",
     },
     {
         value: "80%",
         label: "労働時間削減",
         desc: "手動100時間かかるLP・配信設定をAIが20時間以内に短縮",
+        img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80",
     },
     {
-        value: "30万円",
-        label: "高単価成約モデル",
-        desc: "5,000円の単発相談を30万円の継続講座へアップセルする成約構造",
+        value: "高単価",
+        label: "成約モデル",
+        desc: "単発相談を高単価の継続講座へアップセルする成約構造",
+        img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=200&q=80",
     },
     {
         value: "7日",
         label: "最短構築期間",
         desc: "LP・アプリ・配信設定まで最短7日で完結した実績",
+        img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80",
     },
 ]
 
@@ -28,7 +34,7 @@ const headlines = [
     },
     {
         type: "プライド訴求",
-        copy: "「〇〇ちゃんのママ」で終わるつもりはない。あなたのキャリアを30万円の講座に変える資産構築術",
+        copy: "「〇〇ちゃんのママ」で終わるつもりはない。あなたのキャリアを高単価講座に変える資産構築術",
     },
     {
         type: "即効性訴求",
@@ -36,7 +42,7 @@ const headlines = [
     },
     {
         type: "比較訴求",
-        copy: "再就職して月収20万を目指すか、在宅で30万の講座を1つ売るか。賢い選択はどちらですか？",
+        copy: "再就職して時間を切り売りするか、在宅で高単価講座を販売するか。賢い選択はどちらですか？",
     },
     {
         type: "自動化訴求",
@@ -52,7 +58,7 @@ const beforeItems = [
 ]
 
 const afterItems = [
-    "月商50万円の講座オーナー",
+    "月商が大幅に向上した講座オーナー",
     "AIが24時間自動で販売",
     "育児の合間に構築・運営",
     "「〇〇の専門家」として名乗れる",
@@ -70,46 +76,76 @@ export function TestimonySection() {
                     </h2>
                 </div>
 
+                {/* 数値グリッド + 各人物ポートレート */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
                     {stats.map((s, i) => (
-                        <div key={i} className="border border-slate-200 p-8 text-center hover:border-[#d4af37] transition-colors group">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-slate-900 group-hover:text-[#d4af37] transition-colors mb-3">
+                        <div key={i} className="border border-slate-200 p-6 text-center hover:border-[#d4af37] transition-colors group">
+                            <div className="w-14 h-14 rounded-full overflow-hidden mx-auto mb-4 border-2 border-slate-200 group-hover:border-[#d4af37] transition-colors">
+                                <Image src={s.img} alt={s.label} width={56} height={56} className="object-cover w-full h-full" />
+                            </div>
+                            <div className="text-3xl md:text-4xl font-serif font-bold text-slate-900 group-hover:text-[#d4af37] transition-colors mb-2">
                                 {s.value}
                             </div>
-                            <div className="text-xs font-bold tracking-widest text-slate-700 mb-3 uppercase">{s.label}</div>
+                            <div className="text-xs font-bold tracking-widest text-slate-700 mb-2 uppercase">{s.label}</div>
                             <p className="text-xs text-slate-500 font-light leading-relaxed">{s.desc}</p>
                         </div>
                     ))}
                 </div>
 
-                <div className="bg-slate-50 p-8 md:p-16 mb-16">
-                    <h3 className="text-2xl font-bold font-serif text-slate-900 text-center mb-12">ビフォー・アフター</h3>
+                {/* ビフォー・アフター（写真付き） */}
+                <div className="bg-slate-50 mb-16 overflow-hidden">
+                    <h3 className="text-2xl font-bold font-serif text-slate-900 text-center py-10">ビフォー・アフター</h3>
                     <div className="grid md:grid-cols-2 gap-0">
-                        <div className="bg-slate-200 p-8">
-                            <p className="text-slate-500 text-xs tracking-widest uppercase font-bold mb-6">Before（保活失敗直後）</p>
-                            <ul className="space-y-4">
-                                {beforeItems.map((item, i) => (
-                                    <li key={i} className="text-slate-700 font-light flex items-center gap-3 text-base">
-                                        <span className="text-red-400 font-bold flex-shrink-0">✕</span>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="relative">
+                            <div className="absolute inset-0">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1614289371518-722f2615943d?auto=format&fit=crop&w=600&q=80"
+                                    alt="保活失敗直後の女性"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="grayscale opacity-30"
+                                />
+                                <div className="absolute inset-0 bg-slate-200/80"></div>
+                            </div>
+                            <div className="relative z-10 p-8">
+                                <p className="text-slate-500 text-xs tracking-widest uppercase font-bold mb-6">Before（保活失敗直後）</p>
+                                <ul className="space-y-4">
+                                    {beforeItems.map((item, i) => (
+                                        <li key={i} className="text-slate-700 font-light flex items-center gap-3 text-base">
+                                            <span className="text-red-400 font-bold flex-shrink-0">✕</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className="bg-slate-900 p-8">
-                            <p className="text-[#d4af37] text-xs tracking-widest uppercase font-bold mb-6">After（構築エンジン導入3ヶ月後）</p>
-                            <ul className="space-y-4">
-                                {afterItems.map((item, i) => (
-                                    <li key={i} className="text-white font-light flex items-center gap-3 text-base">
-                                        <span className="text-[#d4af37] font-bold flex-shrink-0">✓</span>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="relative">
+                            <div className="absolute inset-0">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                                    alt="活躍する女性講座オーナー"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="opacity-30"
+                                />
+                                <div className="absolute inset-0 bg-slate-900/85"></div>
+                            </div>
+                            <div className="relative z-10 p-8">
+                                <p className="text-[#d4af37] text-xs tracking-widest uppercase font-bold mb-6">After（構築エンジン導入3ヶ月後）</p>
+                                <ul className="space-y-4">
+                                    {afterItems.map((item, i) => (
+                                        <li key={i} className="text-white font-light flex items-center gap-3 text-base">
+                                            <span className="text-[#d4af37] font-bold flex-shrink-0">✓</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                {/* A/Bヘッドライン */}
                 <div>
                     <h3 className="text-xl font-bold font-serif text-slate-900 text-center mb-8">
                         あなたに刺さる言葉は、どれですか？

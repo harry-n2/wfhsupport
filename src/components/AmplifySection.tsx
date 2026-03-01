@@ -1,19 +1,25 @@
+import Image from "next/image"
+
 const scenarios = [
     {
         year: "1年後",
         salary: "月収0円のまま",
-        savings: "貯金 −120万円",
+        savings: "貯金が着実に減少",
         career: "職歴ブランク1年。求人票で「即戦力」と弾かれ始める。",
         color: "text-orange-400",
         border: "border-orange-400",
+        img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80",
+        imgAlt: "不安な表情の女性",
     },
     {
         year: "3年後",
         salary: "月収0円のまま",
-        savings: "貯金 −360万円",
-        career: "職歴ブランク3年。パート・時給1,000円以下の選択肢しか残らない。",
+        savings: "貯金が大幅に減少",
+        career: "職歴ブランク3年。パート・低時給の選択肢しか残らない。",
         color: "text-red-400",
         border: "border-red-400",
+        img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80",
+        imgAlt: "困惑する女性",
     },
     {
         year: "5年後",
@@ -22,6 +28,8 @@ const scenarios = [
         career: "40代・職歴空白・「誰でも替えが効く労働力」としての再出発。",
         color: "text-red-600",
         border: "border-red-600",
+        img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=300&q=80",
+        imgAlt: "疲れ果てた女性",
     },
 ]
 
@@ -43,30 +51,55 @@ export function AmplifySection() {
 
                 <div className="space-y-6 mb-16">
                     {scenarios.map((s, i) => (
-                        <div key={i} className={`bg-white border-l-4 ${s.border} p-8 shadow-sm flex flex-col md:flex-row md:items-center gap-6`}>
-                            <div className={`text-5xl md:text-6xl font-serif font-bold ${s.color} w-32 flex-shrink-0 text-center`}>
-                                {s.year}
+                        <div key={i} className={`bg-white border-l-4 ${s.border} shadow-sm flex flex-col md:flex-row md:items-center overflow-hidden`}>
+                            {/* 女性画像 */}
+                            <div className="w-full md:w-32 h-32 flex-shrink-0 relative">
+                                <Image
+                                    src={s.img}
+                                    alt={s.imgAlt}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="grayscale opacity-70"
+                                />
                             </div>
-                            <div className="flex-1 border-l border-slate-200 pl-6 space-y-2">
-                                <p className="text-slate-800 font-bold text-lg">{s.salary}</p>
-                                <p className={`font-bold text-lg ${s.color}`}>{s.savings}</p>
-                                <p className="text-slate-600 font-light leading-relaxed">{s.career}</p>
+                            <div className="flex flex-col md:flex-row md:items-center gap-4 p-6 flex-1">
+                                <div className={`text-5xl md:text-6xl font-serif font-bold ${s.color} w-28 flex-shrink-0 text-center`}>
+                                    {s.year}
+                                </div>
+                                <div className="flex-1 border-l border-slate-200 pl-6 space-y-2">
+                                    <p className="text-slate-800 font-bold text-lg">{s.salary}</p>
+                                    <p className={`font-bold text-lg ${s.color}`}>{s.savings}</p>
+                                    <p className="text-slate-600 font-light leading-relaxed">{s.career}</p>
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="bg-slate-900 text-white p-10 md:p-16 text-center">
-                    <p className="text-2xl md:text-3xl font-serif font-bold leading-[1.7] mb-6">
-                        5年後、子供が手を離れた時に残っているのは<br />
-                        <span className="text-red-400">40代・職歴ブランクあり・</span><br />
-                        <span className="text-red-400">「誰でも替えが効く労働力」</span>としての自分だけです。
-                    </p>
-                    <div className="w-12 h-[1px] bg-[#d4af37] mx-auto mb-6"></div>
-                    <p className="text-slate-400 font-light text-lg leading-relaxed">
-                        失業保険を生活費で溶かすか、一生モノの「稼ぐ仕組み」に変えるか。<br />
-                        その選択を、今日、あなたはしています。
-                    </p>
+                {/* 警告ボックス（女性画像を背景に） */}
+                <div className="relative overflow-hidden">
+                    <div className="absolute inset-0">
+                        <Image
+                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=1200&q=80"
+                            alt=""
+                            layout="fill"
+                            objectFit="cover"
+                            className="grayscale opacity-20"
+                        />
+                        <div className="absolute inset-0 bg-slate-900/90"></div>
+                    </div>
+                    <div className="relative z-10 text-white p-10 md:p-16 text-center">
+                        <p className="text-2xl md:text-3xl font-serif font-bold leading-[1.7] mb-6">
+                            5年後、子供が手を離れた時に残っているのは<br />
+                            <span className="text-red-400">40代・職歴ブランクあり・</span><br />
+                            <span className="text-red-400">「誰でも替えが効く労働力」</span>としての自分だけです。
+                        </p>
+                        <div className="w-12 h-[1px] bg-[#d4af37] mx-auto mb-6"></div>
+                        <p className="text-slate-400 font-light text-lg leading-relaxed">
+                            失業保険を生活費で溶かすか、一生モノの「稼ぐ仕組み」に変えるか。<br />
+                            その選択を、今日、あなたはしています。
+                        </p>
+                    </div>
                 </div>
 
             </div>

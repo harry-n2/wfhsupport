@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import Image from "next/image"
 
 const faqs = [
     {
@@ -13,8 +14,8 @@ const faqs = [
         a: "本エンジンが構成案とコードを自動生成するため、指示通りに配置するだけで完成します。プログラミング知識は一切不要です。",
     },
     {
-        q: "30万円は高くないですか？",
-        a: "30万円の講座を1つ売るだけで投資回収可能です。会社員として月給25万を目指すより、圧倒的に低リスクです。失業保険を生活費で消耗させるより、一生モノの仕組みに変える選択です。",
+        q: "サービス料金は高くないですか？",
+        a: "高単価講座を1つ成約させるだけで投資回収が可能です。会社員として月給を目指すより、圧倒的に低リスクです。失業保険を生活費で消耗させるより、一生モノの仕組みに変える選択です。",
     },
     {
         q: "保育園が決まっていなくてもできますか？",
@@ -25,12 +26,12 @@ const faqs = [
         a: "可能です。本エンジンは「細切れ時間の資産化」に特化しています。AIが構成案や執筆の8割を代行するため、5〜10分の作業を積み重ねるだけで、最短2週間でLPから配信設定まで完結します。",
     },
     {
-        q: "30万円の講座を売るための「集客」はどうすればいいですか？",
+        q: "講座を売るための「集客」はどうすればいいですか？",
         a: "集客導線もセットで構築します。AIがあなたのスキルに最適な「SNS投稿案」や「広告コピー」を自動生成。集客から成約までを一つの「構築エンジン」として提供するため、営業活動に走り回る必要はありません。",
     },
     {
-        q: "失業中で30万円の自己投資は正直怖いです。",
-        a: "その「恐怖」を「回収計画」に変えてください。30万円の講座を1件成約させるだけで、投資額は100%回収されます。後者を選んだ方のための、徹底した個別サポート体制を用意しています。",
+        q: "失業中での自己投資は正直怖いです。",
+        a: "その「恐怖」を「回収計画」に変えてください。高単価講座を1件成約させるだけで、投資額の回収が可能です。後者を選んだ方のための、徹底した個別サポート体制を用意しています。",
     },
     {
         q: "すでに似たような講座が世の中に溢れていませんか？",
@@ -53,14 +54,26 @@ export function FaqSection() {
         <section className="bg-slate-50 py-24 md:py-32">
             <div className="container px-6 md:px-12 mx-auto max-w-4xl">
 
-                <div className="text-center mb-16">
-                    <p className="text-[#d4af37] font-bold tracking-[0.2em] text-sm uppercase mb-4">FAQ</p>
-                    <h2 className="text-3xl md:text-5xl font-bold font-serif text-slate-900">
-                        「やらない理由」を、<br />全て解消します
-                    </h2>
-                    <p className="text-slate-500 mt-6 font-light text-lg">
-                        よくいただく10の不安に、事実で答えます。
-                    </p>
+                {/* ヘッダー + 相談員イメージ */}
+                <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
+                    <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#d4af37]/60 shadow-xl">
+                        <Image
+                            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=400&q=80"
+                            alt="サポート担当の女性"
+                            width={160}
+                            height={160}
+                            className="object-cover w-full h-full"
+                        />
+                    </div>
+                    <div className="text-center md:text-left">
+                        <p className="text-[#d4af37] font-bold tracking-[0.2em] text-sm uppercase mb-4">FAQ</p>
+                        <h2 className="text-3xl md:text-5xl font-bold font-serif text-slate-900">
+                            「やらない理由」を、<br />全て解消します
+                        </h2>
+                        <p className="text-slate-500 mt-4 font-light text-lg">
+                            よくいただく10の不安に、事実で答えます。
+                        </p>
+                    </div>
                 </div>
 
                 <div className="space-y-3">
