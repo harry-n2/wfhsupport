@@ -1,65 +1,100 @@
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { DiagnosticTool } from "@/components/DiagnosticTool"
+import { BusinessOverview } from "@/components/BusinessOverview"
+import { ProfileSection } from "@/components/ProfileSection"
+import { AchievementsSection } from "@/components/AchievementsSection"
+import { VisionSection } from "@/components/VisionSection"
+import { CtaSection } from "@/components/CtaSection"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="flex flex-col min-h-screen">
+      {/* 1. Hero Section (Circulation Style) */}
+      <section className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        {/* Background Images Group */}
+        <div className="absolute inset-0 z-0 bg-slate-900">
+          <Image
+            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=2000&q=80"
+            alt="在宅ワークで輝く女性"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center 30%"
+            priority
+            className="opacity-60 transform scale-105"
+          />
+          {/* Accent Image 1 - Overlay */}
+          <div className="absolute top-10 right-10 w-64 h-80 rounded-sm overflow-hidden hidden lg:block opacity-40 mix-blend-luminosity transform rotate-2">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+              alt="ビジネス・自信"
+              layout="fill"
+              objectFit="cover"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+          {/* Accent Image 2 - Overlay */}
+          <div className="absolute bottom-10 left-10 w-72 h-48 rounded-sm overflow-hidden hidden lg:block opacity-30 mix-blend-luminosity transform -rotate-3">
+            <Image
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
+              alt="洗練された執務"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+
+          {/* Subtle Dark Gradient Overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
         </div>
-      </main>
+
+        <div className="container relative z-10 px-6 md:px-12 lg:px-24 mx-auto w-full">
+          <div className="flex flex-col items-start justify-center max-w-3xl text-left space-y-8">
+            <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+              <p className="text-[#d4af37] font-bold tracking-[0.2em] text-sm md:text-base uppercase mb-2">
+                World Trade Next
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif tracking-tight text-white leading-[1.15] drop-shadow-lg">
+                「一人の専門家」としての<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-white">新しい名前</span> を手に入れる。
+              </h1>
+              <p className="text-lg md:text-xl text-slate-200 mt-6 leading-relaxed max-w-xl font-light">
+                商材・スキル不要。<br />
+                アイデンティティ再生診断から始める新しい働き方。<br />
+                あなたの隠れた価値を開花させる、プロフェッショナルな講座オーナーへの道。
+              </p>
+            </div>
+
+            <div className="w-full pt-4 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+              <Button asChild className="w-full sm:w-auto px-10 py-7 text-lg font-bold rounded-none bg-white text-slate-900 hover:bg-[#d4af37] hover:text-white shadow-2xl transition-all duration-300 border-l-4 border-[#d4af37] hover:border-white">
+                <Link href="#diagnostic-tool">
+                  【無料】あなたの経験が「圧倒的な価値」に変わるか診断する
+                </Link>
+              </Button>
+              <p className="text-sm text-slate-300 mt-3 font-light tracking-wide">※3分のAI診断 / LINEで結果の全容をお届け</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Diagnostic Tool Section (アイデンティティ再生診断) */}
+      <DiagnosticTool />
+
+      {/* 3. Business Overview (事業概要) */}
+      <BusinessOverview />
+
+      {/* 4. Profile Section (代表・アドバイザー) */}
+      <ProfileSection />
+
+      {/* 5. Achievements Section (実績・SNS) */}
+      <AchievementsSection />
+
+      {/* 6. Vision Section (ビジョンへの誘導) */}
+      <VisionSection />
+
+      {/* 7. CTA Section (最終LINE誘導) */}
+      <CtaSection />
+
     </div>
-  );
+  )
 }
