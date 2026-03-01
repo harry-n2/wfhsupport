@@ -12,7 +12,7 @@ const pains = [
 
 const portraits = [
     {
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+        src: "https://images.unsplash.com/photo-1606406054219-619c4c2e2100?auto=format&fit=crop&w=200&q=80",
         alt: "同じ悩みを持つ女性",
     },
     {
@@ -20,7 +20,7 @@ const portraits = [
         alt: "共感する女性",
     },
     {
-        src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80",
+        src: "https://images.unsplash.com/photo-1475823678248-624fc6f85785?auto=format&fit=crop&w=200&q=80",
         alt: "再起を誓う女性",
     },
 ]
@@ -31,11 +31,11 @@ export function PainSection() {
             {/* 背景テクスチャ */}
             <div className="absolute inset-0 pointer-events-none">
                 <Image
-                    src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1600&q=80"
+                    src="https://images.unsplash.com/photo-1437623889155-075d40e2e59f?auto=format&fit=crop&w=1600&q=80"
                     alt=""
                     layout="fill"
                     objectFit="cover"
-                    className="opacity-10 grayscale"
+                    className="opacity-10"
                 />
                 <div className="absolute inset-0 bg-slate-900/80"></div>
             </div>
@@ -51,7 +51,7 @@ export function PainSection() {
                     <div className="flex items-center justify-center gap-4 mt-10">
                         {portraits.map((p, i) => (
                             <div key={i} className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-[#d4af37]/60 shadow-lg">
-                                <Image src={p.src} alt={p.alt} width={64} height={64} className="object-cover w-full h-full grayscale" />
+                                <Image src={p.src} alt={p.alt} width={64} height={64} className="object-cover w-full h-full" />
                             </div>
                         ))}
                         <p className="text-slate-400 text-sm font-light ml-2">同じ悩みを抱える女性たちへ</p>
@@ -84,11 +84,11 @@ export function PainSection() {
                     <div className="flex flex-col md:flex-row gap-8 items-center">
                         <div className="w-full md:w-48 h-56 flex-shrink-0 rounded-sm overflow-hidden shadow-xl">
                             <Image
-                                src="https://images.unsplash.com/photo-1614289371518-722f2615943d?auto=format&fit=crop&w=400&q=80"
+                                src="https://images.unsplash.com/photo-1650075990015-af095f1659e3?auto=format&fit=crop&w=400&q=80"
                                 alt="悩む女性"
                                 width={200}
                                 height={224}
-                                className="object-cover w-full h-full grayscale opacity-80"
+                                className="object-cover w-full h-full"
                             />
                         </div>
                         <div className="space-y-4 flex-1">

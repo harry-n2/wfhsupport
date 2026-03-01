@@ -8,7 +8,7 @@ const scenarios = [
         career: "職歴ブランク1年。求人票で「即戦力」と弾かれ始める。",
         color: "text-orange-400",
         border: "border-orange-400",
-        img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80",
+        img: "https://images.unsplash.com/photo-1706974856006-1fab95db0e49?auto=format&fit=crop&w=300&q=80",
         imgAlt: "不安な表情の女性",
     },
     {
@@ -18,7 +18,7 @@ const scenarios = [
         career: "職歴ブランク3年。パート・低時給の選択肢しか残らない。",
         color: "text-red-400",
         border: "border-red-400",
-        img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80",
+        img: "https://images.unsplash.com/photo-1541297955747-4b652e022815?auto=format&fit=crop&w=300&q=80",
         imgAlt: "困惑する女性",
     },
     {
@@ -28,7 +28,7 @@ const scenarios = [
         career: "40代・職歴空白・「誰でも替えが効く労働力」としての再出発。",
         color: "text-red-600",
         border: "border-red-600",
-        img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=300&q=80",
+        img: "https://images.unsplash.com/photo-1575397143210-a59cd0cca1a4?auto=format&fit=crop&w=300&q=80",
         imgAlt: "疲れ果てた女性",
     },
 ]
@@ -59,7 +59,6 @@ export function AmplifySection() {
                                     alt={s.imgAlt}
                                     layout="fill"
                                     objectFit="cover"
-                                    className="grayscale opacity-70"
                                 />
                             </div>
                             <div className="flex flex-col md:flex-row md:items-center gap-4 p-6 flex-1">
@@ -80,11 +79,11 @@ export function AmplifySection() {
                 <div className="relative overflow-hidden">
                     <div className="absolute inset-0">
                         <Image
-                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=1200&q=80"
+                            src="https://images.unsplash.com/photo-1605501218769-dd46efd48417?auto=format&fit=crop&w=1200&q=80"
                             alt=""
                             layout="fill"
                             objectFit="cover"
-                            className="grayscale opacity-20"
+                            className="opacity-20"
                         />
                         <div className="absolute inset-0 bg-slate-900/90"></div>
                     </div>

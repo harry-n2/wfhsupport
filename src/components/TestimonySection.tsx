@@ -5,25 +5,25 @@ const stats = [
         value: "94%",
         label: "講座開発成功率",
         desc: "専門知識ゼロの主婦が1ヶ月以内に商品構成を完了した実績",
-        img: "https://images.unsplash.com/photo-1573497491208-6f16f92ff4cb?auto=format&fit=crop&w=200&q=80",
+        img: "https://images.unsplash.com/photo-1624091844772-554661d10173?auto=format&fit=crop&w=200&q=80",
     },
     {
         value: "80%",
         label: "労働時間削減",
         desc: "手動100時間かかるLP・配信設定をAIが20時間以内に短縮",
-        img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80",
+        img: "https://images.unsplash.com/photo-1541823709867-1b206113eafd?auto=format&fit=crop&w=200&q=80",
     },
     {
         value: "高単価",
         label: "成約モデル",
         desc: "単発相談を高単価の継続講座へアップセルする成約構造",
-        img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=200&q=80",
+        img: "https://images.unsplash.com/photo-1536291734366-71f75ba1a9db?auto=format&fit=crop&w=200&q=80",
     },
     {
         value: "7日",
         label: "最短構築期間",
         desc: "LP・アプリ・配信設定まで最短7日で完結した実績",
-        img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80",
+        img: "https://images.unsplash.com/photo-1610604049055-cd3d9bb4660f?auto=format&fit=crop&w=200&q=80",
     },
 ]
 
@@ -99,11 +99,11 @@ export function TestimonySection() {
                         <div className="relative">
                             <div className="absolute inset-0">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1614289371518-722f2615943d?auto=format&fit=crop&w=600&q=80"
+                                    src="https://images.unsplash.com/photo-1526746161-2ed96de67b9f?auto=format&fit=crop&w=600&q=80"
                                     alt="保活失敗直後の女性"
                                     layout="fill"
                                     objectFit="cover"
-                                    className="grayscale opacity-30"
+                                    className="opacity-30"
                                 />
                                 <div className="absolute inset-0 bg-slate-200/80"></div>
                             </div>
@@ -122,7 +122,7 @@ export function TestimonySection() {
                         <div className="relative">
                             <div className="absolute inset-0">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                                    src="https://images.unsplash.com/photo-1475823678248-624fc6f85785?auto=format&fit=crop&w=600&q=80"
                                     alt="活躍する女性講座オーナー"
                                     layout="fill"
                                     objectFit="cover"

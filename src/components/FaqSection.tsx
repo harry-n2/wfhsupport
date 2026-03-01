@@ -58,7 +58,7 @@ export function FaqSection() {
                 <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
                     <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#d4af37]/60 shadow-xl">
                         <Image
-                            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=400&q=80"
+                            src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?auto=format&fit=crop&w=400&q=80"
                             alt="サポート担当の女性"
                             width={160}
                             height={160}
