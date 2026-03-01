@@ -25,9 +25,9 @@ export default function Home() {
             alt="在宅ワークで輝く女性"
             layout="fill"
             objectFit="cover"
-            objectPosition="center 30%"
+            objectPosition="65% center"
             priority
-            className="opacity-60 transform scale-105"
+            className="opacity-85 transform scale-105"
           />
           {/* Accent Image 2 - Overlay */}
           <div className="absolute bottom-10 left-10 w-72 h-48 rounded-sm overflow-hidden hidden lg:block opacity-30 mix-blend-luminosity transform -rotate-3">
@@ -40,7 +40,7 @@ export default function Home() {
           </div>
 
           {/* Subtle Dark Gradient Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/92 via-slate-900/55 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
         </div>
 
