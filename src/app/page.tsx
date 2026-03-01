@@ -29,15 +29,6 @@ export default function Home() {
             priority
             className="opacity-60 transform scale-105"
           />
-          {/* Accent Image 1 - Overlay */}
-          <div className="absolute top-10 right-10 w-64 h-80 rounded-sm overflow-hidden hidden lg:block opacity-40 mix-blend-luminosity transform rotate-2">
-            <Image
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-              alt="ビジネス・自信"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
           {/* Accent Image 2 - Overlay */}
           <div className="absolute bottom-10 left-10 w-72 h-48 rounded-sm overflow-hidden hidden lg:block opacity-30 mix-blend-luminosity transform -rotate-3">
             <Image
