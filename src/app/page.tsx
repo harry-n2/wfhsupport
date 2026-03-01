@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { DiagnosticTool } from "@/components/DiagnosticTool"
+import { FreeToolSection } from "@/components/FreeToolSection"
 import { BusinessOverview } from "@/components/BusinessOverview"
 import { ProfileSection } from "@/components/ProfileSection"
 import { AchievementsSection } from "@/components/AchievementsSection"
@@ -78,6 +79,9 @@ export default function Home() {
 
       {/* 3. Diagnostic Tool Section (アイデンティティ再生診断) */}
       <DiagnosticTool />
+
+      {/* 3.5. Free Tool Section (無料AIツール配布) */}
+      <FreeToolSection />
 
       {/* 4. Amplify Section (放置リスク・5年後シミュレーション) */}
       <AmplifySection />
