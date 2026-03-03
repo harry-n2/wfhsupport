@@ -65,6 +65,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 1.5. YouTube Video Section */}
+      <section className="w-full bg-[#0a1128] py-16 md:py-24 flex justify-center items-center border-t border-slate-800">
+        <div className="container px-6 mx-auto w-full max-w-5xl">
+          <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-slate-700/50">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/sr4MkAYwcfU"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Pain Section (共感・痛みの言語化) */}
       <PainSection />
 
