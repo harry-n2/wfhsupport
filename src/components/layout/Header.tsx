@@ -15,7 +15,7 @@ export function Header() {
                     <Link href="#overview" className="transition-colors hover:text-[#d4af37] text-slate-600">Overview</Link>
                     <Link href="#profile" className="transition-colors hover:text-[#d4af37] text-slate-600">Profile</Link>
                     <Link href="#achievements" className="transition-colors hover:text-[#d4af37] text-slate-600">Achievements</Link>
-                    <Link href="/vision" className="transition-colors hover:text-[#d4af37] text-slate-600">Vision</Link>
+                    <Link href="#vision" className="transition-colors hover:text-[#d4af37] text-slate-600">Vision</Link>
                 </nav>
 
                 <div className="flex items-center gap-4">

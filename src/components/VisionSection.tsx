@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 export function VisionSection() {
     return (
-        <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden">
+        <section id="vision" className="relative min-h-[800px] flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -12,7 +12,8 @@ export function VisionSection() {
                     alt="Vision"
                     layout="fill"
                     objectFit="cover"
-                    className="object-center scale-105"
+                    objectPosition="center 15%"
+                    className="object-center"
                 />
                 {/* Dark Overlay for Text Readability */}
                 <div className="absolute inset-0 bg-slate-900/60 mix-blend-multiply"></div>
