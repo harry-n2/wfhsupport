@@ -10,7 +10,7 @@ export default function VisionPage() {
                         alt="Our Vision"
                         layout="fill"
                         objectFit="cover"
-                        objectPosition="center 32%"
+                        objectPosition="center 22%"
                         priority
                         className="opacity-60 grayscale"
                     />
