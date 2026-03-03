@@ -26,7 +26,7 @@ export default function Home() {
             alt="在宅ワークで輝く女性"
             layout="fill"
             objectFit="cover"
-            objectPosition="center right"
+            objectPosition="center 30%"
             priority
             className="opacity-80"
           />
