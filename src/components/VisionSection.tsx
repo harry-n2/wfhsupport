@@ -30,17 +30,7 @@ export function VisionSection() {
                         <span className="italic text-[#d4af37]">自由に</span>、楽しくする存在。
                     </h2>
 
-                    {/* Editorial Image Insert */}
-                    <div className="my-12 h-[1px] w-24 bg-[#d4af37] mx-auto opacity-70"></div>
-                    <div className="relative w-full max-w-xl mx-auto aspect-video overflow-hidden rounded-sm opacity-90 mb-12 mt-16 lg:mt-32 border border-slate-700/50 shadow-2xl">
-                        <Image
-                            src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1200&q=80"
-                            alt="洗練されたワークスタイル"
-                            layout="fill"
-                            objectFit="cover"
-                            className="hover:scale-105 transition-transform duration-[2s] grayscale mix-blend-luminosity"
-                        />
-                    </div>
+
 
                     <div className="space-y-6 text-lg md:text-xl text-slate-200 leading-relaxed max-w-2xl mx-auto font-light drop-shadow-md">
                         <p>

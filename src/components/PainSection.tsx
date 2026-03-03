@@ -36,13 +36,24 @@ export function PainSection() {
                     </h2>
                 </div>
 
-                <div className="space-y-6 mb-20">
+                <div className="space-y-6 mb-16">
                     {pains.map((pain, i) => (
                         <div key={i} className="flex items-start gap-4 border-b border-white/10 pb-6">
                             <span className="text-[#d4af37] font-serif text-xl leading-none mt-1 flex-shrink-0">✓</span>
                             <p className="text-lg md:text-xl text-slate-200 font-light leading-relaxed">{pain}</p>
                         </div>
                     ))}
+                </div>
+
+                {/* Relocated Laptop Image */}
+                <div className="relative w-full max-w-2xl mx-auto aspect-[21/9] overflow-hidden rounded-sm opacity-90 mb-20 border border-slate-700/50 shadow-2xl">
+                    <Image
+                        src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1200&q=80"
+                        alt="洗練されたワークスタイル"
+                        layout="fill"
+                        objectFit="cover"
+                        className="hover:scale-105 transition-transform duration-[2s] grayscale mix-blend-luminosity"
+                    />
                 </div>
 
                 <div className="space-y-12 max-w-3xl mx-auto">
