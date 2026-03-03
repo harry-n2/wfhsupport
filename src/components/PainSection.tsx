@@ -10,20 +10,7 @@ const pains = [
     "でも、ここで何もしなければ、一生「何もない私」のまま。",
 ]
 
-const portraits = [
-    {
-        src: "https://images.unsplash.com/photo-1606406054219-619c4c2e2100?auto=format&fit=crop&w=200&q=80",
-        alt: "同じ悩みを持つ女性",
-    },
-    {
-        src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-        alt: "共感する女性",
-    },
-    {
-        src: "https://images.unsplash.com/photo-1475823678248-624fc6f85785?auto=format&fit=crop&w=200&q=80",
-        alt: "再起を誓う女性",
-    },
-]
+
 
 export function PainSection() {
     return (
@@ -47,15 +34,6 @@ export function PainSection() {
                     <h2 className="text-3xl md:text-5xl font-bold font-serif text-white leading-[1.4]">
                         こんな本音、<br />心当たりはありませんか？
                     </h2>
-                    {/* 3名のポートレート */}
-                    <div className="flex items-center justify-center gap-4 mt-10">
-                        {portraits.map((p, i) => (
-                            <div key={i} className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-[#d4af37]/60 shadow-lg">
-                                <Image src={p.src} alt={p.alt} width={64} height={64} className="object-cover w-full h-full" />
-                            </div>
-                        ))}
-                        <p className="text-slate-400 text-sm font-light ml-2">同じ悩みを抱える女性たちへ</p>
-                    </div>
                 </div>
 
                 <div className="space-y-6 mb-20">
@@ -84,7 +62,7 @@ export function PainSection() {
                     <div className="flex flex-col md:flex-row gap-8 items-center">
                         <div className="w-full md:w-48 h-56 flex-shrink-0 rounded-sm overflow-hidden shadow-xl">
                             <Image
-                                src="https://images.unsplash.com/photo-1650075990015-af095f1659e3?auto=format&fit=crop&w=400&q=80"
+                                src="/images/pain_japanese_mom.png"
                                 alt="悩む女性"
                                 width={200}
                                 height={224}

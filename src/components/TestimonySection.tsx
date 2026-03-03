@@ -99,7 +99,7 @@ export function TestimonySection() {
                         <div className="relative">
                             <div className="absolute inset-0">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1526746161-2ed96de67b9f?auto=format&fit=crop&w=600&q=80"
+                                    src="/images/pain_japanese_mom.png"
                                     alt="保活失敗直後の女性"
                                     layout="fill"
                                     objectFit="cover"
@@ -122,7 +122,7 @@ export function TestimonySection() {
                         <div className="relative">
                             <div className="absolute inset-0">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1475823678248-624fc6f85785?auto=format&fit=crop&w=600&q=80"
+                                    src="/images/benefit_japanese_mom.png"
                                     alt="活躍する女性講座オーナー"
                                     layout="fill"
                                     objectFit="cover"

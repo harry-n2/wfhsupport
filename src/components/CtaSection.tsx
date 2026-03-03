@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -30,6 +32,31 @@ export function CtaSection() {
                             「一人の専門家」としての新しい生き方を手に入れる第一歩。<br />
                             今すぐ、あなたの隠れた価値を数値化しましょう。
                         </p>
+                    </div>
+
+                    {/* Manga Banner */}
+                    <div className="w-full max-w-2xl mx-auto mb-16 relative rounded-sm overflow-hidden shadow-2xl border border-[#d4af37]/40 group cursor-pointer" onClick={() => window.open("https://line.me/R/ti/p/@755crlgt?oat_content=url&ts=05012102", "_blank")}>
+                        <div className="relative h-64 md:h-80 w-full">
+                            <Image
+                                src="/images/manga_banner_background.png"
+                                alt="マンガ公開間近！"
+                                layout="fill"
+                                objectFit="cover"
+                                className="group-hover:scale-105 transition-transform duration-700"
+                            />
+                            {/* Overlay Text */}
+                            <div className="absolute inset-0 bg-slate-900/50 flex flex-col justify-center items-center text-center p-6">
+                                <span className="bg-[#d4af37] text-slate-900 font-bold text-xs md:text-sm px-4 py-1 rounded-sm mb-4 tracking-widest animate-pulse">
+                                    限定公開予定
+                                </span>
+                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-white mb-4 tracking-wide drop-shadow-lg leading-tight">
+                                    共感必至の<br className="md:hidden" />オリジナルマンガ<br />現在制作中！
+                                </h3>
+                                <p className="text-white text-sm md:text-base font-medium tracking-wider drop-shadow-md bg-slate-900/40 px-4 py-2 rounded-sm border border-white/20">
+                                    LINE登録した方にのみ<span className="text-[#d4af37] font-bold mx-1">無料配布</span>します
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* CTA Card */}

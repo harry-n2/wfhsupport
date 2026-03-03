@@ -18,31 +18,22 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* 1. Hero Section (Circulation Style) */}
-      <section className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden pt-20">
         {/* Background Images Group */}
         <div className="absolute inset-0 z-0 bg-slate-900">
           <Image
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=2000&q=80"
+            src="/images/hero_japanese_mom.png"
             alt="在宅ワークで輝く女性"
             layout="fill"
             objectFit="cover"
-            objectPosition="65% center"
+            objectPosition="center right"
             priority
-            className="opacity-85 transform scale-105"
+            className="opacity-80"
           />
-          {/* Accent Image 2 - Overlay */}
-          <div className="absolute bottom-10 left-10 w-72 h-48 rounded-sm overflow-hidden hidden lg:block opacity-30 mix-blend-luminosity transform -rotate-3">
-            <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
-              alt="洗練された執務"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
 
-          {/* Subtle Dark Gradient Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/92 via-slate-900/55 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+          {/* Subtle Dark Gradient Overlay for text readability (darker on left) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-transparent md:w-2/3"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-transparent to-slate-900/80"></div>
         </div>
 
         <div className="container relative z-10 px-6 md:px-12 lg:px-24 mx-auto w-full">
@@ -51,11 +42,11 @@ export default function Home() {
               <p className="text-[#d4af37] font-bold tracking-[0.2em] text-sm md:text-base uppercase mb-2">
                 World Trade Next
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif tracking-tight text-white leading-[1.15] drop-shadow-lg">
-                「一人の専門家」としての<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-white">新しい名前</span> を手に入れる。
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-serif tracking-tight text-white leading-snug drop-shadow-lg">
+                「一人の専門家」としての<br className="hidden md:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-white">新しい名前</span>を手に入れる。
               </h1>
-              <p className="text-lg md:text-xl text-slate-200 mt-6 leading-relaxed max-w-xl font-light">
+              <p className="text-base md:text-lg lg:text-xl text-slate-200 mt-6 leading-relaxed max-w-xl font-light">
                 商材・スキル不要。<br />
                 アイデンティティ再生診断から始める新しい働き方。<br />
                 あなたの隠れた価値を開花させる、プロフェッショナルな講座オーナーへの道。

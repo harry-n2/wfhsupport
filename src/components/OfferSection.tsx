@@ -39,7 +39,7 @@ export function OfferSection() {
                 <div className="grid md:grid-cols-2 gap-0 mb-16 overflow-hidden rounded-sm shadow-lg">
                     <div className="relative h-48 md:h-64">
                         <Image
-                            src="https://images.unsplash.com/photo-1575397143210-a59cd0cca1a4?auto=format&fit=crop&w=600&q=80"
+                            src="/images/pain_japanese_mom.png"
                             alt="再就職に悩む女性"
                             layout="fill"
                             objectFit="cover"
@@ -50,7 +50,7 @@ export function OfferSection() {
                     </div>
                     <div className="relative h-48 md:h-64">
                         <Image
-                            src="https://images.unsplash.com/photo-1536291734366-71f75ba1a9db?auto=format&fit=crop&w=600&q=80"
+                            src="/images/benefit_japanese_mom.png"
                             alt="自立して活躍する女性"
                             layout="fill"
                             objectFit="cover"
@@ -111,7 +111,7 @@ export function OfferSection() {
                         {/* 女性画像サイドパネル */}
                         <div className="relative w-full md:w-56 h-48 md:h-auto flex-shrink-0">
                             <Image
-                                src="https://images.unsplash.com/photo-1606406054219-619c4c2e2100?auto=format&fit=crop&w=400&q=80"
+                                src="/images/solution_japanese_mom.png"
                                 alt="自信を持って活躍する女性"
                                 layout="fill"
                                 objectFit="cover"
