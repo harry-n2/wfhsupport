@@ -32,7 +32,7 @@ export function VisionSection() {
 
                     {/* Editorial Image Insert */}
                     <div className="my-12 h-[1px] w-24 bg-[#d4af37] mx-auto opacity-70"></div>
-                    <div className="relative w-full max-w-2xl mx-auto aspect-[21/9] overflow-hidden rounded-sm opacity-90 mb-12 border border-slate-700/50 shadow-2xl">
+                    <div className="relative w-full max-w-xl mx-auto aspect-video overflow-hidden rounded-sm opacity-90 mb-12 mt-16 lg:mt-32 border border-slate-700/50 shadow-2xl">
                         <Image
                             src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1200&q=80"
                             alt="洗練されたワークスタイル"
