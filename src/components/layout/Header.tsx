@@ -16,7 +16,7 @@ export function Header() {
                     <Link href="/#profile" className="transition-colors hover:text-[#d4af37] text-slate-600">Profile</Link>
                     <Link href="/#achievements" className="transition-colors hover:text-[#d4af37] text-slate-600">Achievements</Link>
                     <Link href="/#vision" className="transition-colors hover:text-[#d4af37] text-slate-600">Vision</Link>
-                    <Link href="/course" className="transition-colors hover:text-[#d4af37] text-slate-600">AI実践講座</Link>
+                    <Link href="https://ai-course-platform-blush.vercel.app" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#d4af37] text-slate-600">AI実践講座</Link>
                 </nav>
 
                 <div className="flex items-center gap-4">
