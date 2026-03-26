@@ -21,7 +21,7 @@ export function Header() {
 
                 <div className="flex items-center gap-4">
                     <Button asChild variant="outline" className="hidden md:inline-flex rounded-none bg-white text-slate-900 hover:bg-slate-100 transition-colors shadow-none h-11 px-6 font-bold tracking-wider text-xs uppercase border border-slate-300">
-                        <Link href="https://ljpbqpwr5vbk.jp.larksuite.com/share/base/form/shrjp9gksNra45vIjBd3UBlJ23e" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://ljpbqpwr5vbk.jp.larksuite.com/scheduler/96c06a2209d4e79e" target="_blank" rel="noopener noreferrer">
                             お問い合わせ
                         </Link>
                     </Button>
