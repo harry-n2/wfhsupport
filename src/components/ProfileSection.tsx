@@ -70,37 +70,6 @@ export function ProfileSection() {
                         </div>
                     </div>
 
-                    {/* 2. アドバイザープロフィール */}
-                    <div className="flex flex-col md:flex-row-reverse items-stretch gap-0 bg-[#0f172a] rounded-sm overflow-hidden border border-slate-800 shadow-2xl w-full md:w-11/12 ml-auto">
-                        {/* Image Right */}
-                        <div className="w-full md:w-1/3 relative h-[300px] md:h-auto">
-                            <Image
-                                src="/アドバイザー 山田 千穂.png"
-                                alt="アドバイザー：山田 千穂"
-                                layout="fill"
-                                objectFit="cover"
-                                className="transition-all duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent"></div>
-                        </div>
-
-                        {/* Text Left */}
-                        <div className="w-full md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
-                            <p className="text-slate-500 text-xs tracking-widest font-bold uppercase mb-2">Advisor</p>
-                            <h3 className="text-xl md:text-2xl font-bold mb-6 tracking-wider font-serif">山田 千穂</h3>
-
-                            <div className="space-y-4 text-slate-300 text-sm leading-relaxed font-light">
-                                <p>
-                                    在宅ワーク支援および女性のキャリア形成に関する豊富な知見を持ち、
-                                    受講生一人ひとりの「強み」や「アイデンティティ」の発掘を多角的にサポートします。
-                                </p>
-                                <p>
-                                    女性ならではの視点と、きめ細やかなサポートで、あなたのビジネス構築を併走いたします。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
