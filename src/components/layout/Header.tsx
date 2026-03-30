@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Header() {
+    const [mobileOpen, setMobileOpen] = useState(false);
+
     return (
         <header className="fixed top-0 z-50 w-full transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200">
             <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-8">
@@ -11,6 +17,7 @@ export function Header() {
                     </span>
                 </Link>
 
+                {/* Desktop Nav */}
                 <nav className="hidden lg:flex items-center gap-10 text-sm font-bold tracking-widest uppercase">
                     <Link href="/#overview" className="transition-colors hover:text-[#d4af37] text-slate-600">Overview</Link>
                     <Link href="/#profile" className="transition-colors hover:text-[#d4af37] text-slate-600">Profile</Link>
@@ -19,19 +26,76 @@ export function Header() {
                     <Link href="https://ai-course-platform-blush.vercel.app" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#d4af37] text-slate-600">AI実践講座</Link>
                 </nav>
 
-                <div className="flex items-center gap-4">
-                    <Button asChild variant="outline" className="hidden md:inline-flex rounded-none bg-white text-slate-900 hover:bg-slate-100 transition-colors shadow-none h-11 px-6 font-bold tracking-wider text-xs uppercase border border-slate-300">
+                {/* Desktop CTA */}
+                <div className="hidden lg:flex items-center gap-4">
+                    <Button asChild variant="outline" className="rounded-none bg-white text-slate-900 hover:bg-slate-100 transition-colors shadow-none h-11 px-6 font-bold tracking-wider text-xs uppercase border border-slate-300">
                         <Link href="https://ljpbqpwr5vbk.jp.larksuite.com/scheduler/96c06a2209d4e79e" target="_blank" rel="noopener noreferrer">
                             お問い合わせ
                         </Link>
                     </Button>
-                    <Button asChild className="hidden md:inline-flex rounded-none bg-slate-900 text-white hover:bg-[#d4af37] transition-colors shadow-none h-11 px-6 font-bold tracking-wider text-xs uppercase border-l-2 border-[#d4af37]">
+                    <Button asChild className="rounded-none bg-slate-900 text-white hover:bg-[#d4af37] transition-colors shadow-none h-11 px-6 font-bold tracking-wider text-xs uppercase border-l-2 border-[#d4af37]">
                         <Link href="https://line.me/R/ti/p/@755crlgt?oat_content=url&ts=05012102" target="_blank" rel="noopener noreferrer">
                             AI無料鑑定
                         </Link>
                     </Button>
                 </div>
+
+                {/* Mobile menu button */}
+                <button
+                    className="lg:hidden p-2 text-slate-700"
+                    onClick={() => setMobileOpen(!mobileOpen)}
+                    aria-label="メニュー"
+                >
+                    {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
             </div>
+
+            {/* Mobile Menu */}
+            {mobileOpen && (
+                <div className="lg:hidden bg-white border-t border-slate-200 px-4 py-6 space-y-4">
+                    <Link href="/#overview" className="block text-sm font-bold tracking-widest uppercase text-slate-700 py-2" onClick={() => setMobileOpen(false)}>
+                        Overview
+                    </Link>
+                    <Link href="/#profile" className="block text-sm font-bold tracking-widest uppercase text-slate-700 py-2" onClick={() => setMobileOpen(false)}>
+                        Profile
+                    </Link>
+                    <Link href="/#achievements" className="block text-sm font-bold tracking-widest uppercase text-slate-700 py-2" onClick={() => setMobileOpen(false)}>
+                        Achievements
+                    </Link>
+                    <Link href="/#vision" className="block text-sm font-bold tracking-widest uppercase text-slate-700 py-2" onClick={() => setMobileOpen(false)}>
+                        Vision
+                    </Link>
+                    <Link
+                        href="https://ai-course-platform-blush.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-sm font-bold tracking-widest uppercase text-slate-700 py-2"
+                        onClick={() => setMobileOpen(false)}
+                    >
+                        AI実践講座
+                    </Link>
+                    <div className="pt-4 space-y-3">
+                        <Link
+                            href="https://ljpbqpwr5vbk.jp.larksuite.com/scheduler/96c06a2209d4e79e"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-center px-5 py-3 text-sm font-bold border border-slate-300 text-slate-700"
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            お問い合わせ
+                        </Link>
+                        <Link
+                            href="https://line.me/R/ti/p/@755crlgt?oat_content=url&ts=05012102"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-center px-5 py-3 text-sm font-bold bg-slate-900 text-white"
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            AI無料鑑定
+                        </Link>
+                    </div>
+                </div>
+            )}
         </header>
     )
 }
